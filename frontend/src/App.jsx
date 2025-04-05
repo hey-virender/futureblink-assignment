@@ -12,8 +12,12 @@ const App = () => {
     <Router>
       <Header userName={userName} />
       <Routes>
-        <Route path="/sequence" element={isLoggedIn ? <SequenceBuilder/>:<Home/>} />
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/sequence"
+          element={isLoggedIn ? <SequenceBuilder /> : <Home />}
+        />
+
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
       </Routes>
