@@ -6,7 +6,7 @@
     {
       
       "headers": [
-        {
+        {"source": "/(.*)",
           "key": "Access-Control-Allow-Origin",
           "value": "https://futureblink-assignment-1p8m.onrender.com"
         },
