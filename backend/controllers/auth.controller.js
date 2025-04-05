@@ -53,7 +53,7 @@ export const login = async (req, res) => {
         .send({ success: false, error: "Invalid Credentials" });
     }
     const token = generateToken(user._id);
-    res.cookie("token", token, { httpOnly: true });
+    res.cookie("token", token, { httpOnly: true, secure: true });
     return res.status(200).send({
       success: true,
       message: "Login Successful",
@@ -74,7 +74,9 @@ export const login = async (req, res) => {
 export const logout = async (req, res) => {
   try {
     res.clearCookie("token");
-    return res.status(200).send({ success: true, message: "Logout successful" });
+    return res
+      .status(200)
+      .send({ success: true, message: "Logout successful" });
   } catch (error) {
     console.log(error);
     return res
