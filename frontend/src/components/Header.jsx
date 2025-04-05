@@ -8,7 +8,9 @@ const Header = ({ userName }) => {
 
   return (
     <div className="flex justify-between items-center p-4 bg-blue-600 text-white">
-      <h1 className="font-bold text-xl">Scheduler</h1>
+      <h1 className="font-bold text-xl">
+        <a href="/">Scheduler</a>
+      </h1>
       {userName && (
         <div className="text-lg font-semibold">Welcome, {userName}</div>
       )}
