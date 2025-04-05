@@ -1,5 +1,21 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://futureblink-assignment-1p8m.onrender.com"
+        },
+        {
+          "key": "Access-Control-Allow-Credentials",
+          "value": "true"
+        }
+      ]
+    }
   ]
+
 }

@@ -8,10 +8,10 @@ const useAxios = () => {
   const instance = useMemo(() => {
     const client = axios.create({
       baseURL: BASE_URL,
-      withCredentials: true, 
       headers: {
         "Content-Type": "application/json",
-      },
+        
+      },withCredentials: true, 
     });
 
    
