@@ -15,6 +15,7 @@ app.use(
   cors({
     origin: "https://futureblink-assignment.vercel.app",
     credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization']
   }),
 );
 app.use(express.json());
