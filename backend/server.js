@@ -13,7 +13,7 @@ connectToDatabase();
 await agendaReady;
 app.use(
   cors({
-    origin: ["https://futureblink-assignment.vercel.app/"],
+    origin: "https://futureblink-assignment.vercel.app",
     credentials: true,
   }),
 );
