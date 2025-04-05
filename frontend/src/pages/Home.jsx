@@ -1,6 +1,8 @@
 import React from "react";
 
 const Home = () => {
+  const userName = localStorage.getItem("schedulerUserName");
+  const isLoggedIn = userName !== null;
   return (
     <div>
       <h1 className="text-center text-7xl font-semibold mt-12">
@@ -12,7 +14,7 @@ const Home = () => {
       </p>
       <div className="flex justify-center mt-8">
         <a
-          href="/sequence"
+          href={isLoggedIn ? "/sequence" : "/signin"}
           className="bg-indigo-600 text-white px-6 py-2 rounded-xl shadow-lg hover:bg-indigo-700 transition"
         >
           Get Started
